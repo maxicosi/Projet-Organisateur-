@@ -1,7 +1,7 @@
 "use strict";
 
 function ajoutUtilisateur(nom,prenom,mail,mdp){
-    xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open("get",`/ajouterUtilisateur?prenom=${prenom}$nom=${nom}$mail=${mail}&mdp=${mdp}`,true);
     xhr.onerror =
         function (){
