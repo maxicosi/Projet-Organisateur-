@@ -18,7 +18,7 @@ function ajoutUtilisateur(nom,prenom,pseudo,mdp){
                 closPopUps();
             }
             else if (request.status == 400){
-                document.getElementById("pseudoInput").style.color= "red";
+                document.getElementById("prenomInput").style.color= "red";
                 document.getElementById("pseudoExisteDejaErreur").style.display= "block";
             }
         };
