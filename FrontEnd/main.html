@@ -4,11 +4,12 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8; fr">
     <title> Projet de seconde session : Organisation </title>
     <meta name="desciption" content="Il s'agit dun projet dans le cadre de la seconde session d'évaluation">
-    <script src="js/ajouterUtilisateur.js"></script>
+
     <script src="js/main.js"></script>
     <link href="css/main.css">
-    <script src='js/connexion.js'></script>
-
+    <script src="js/ajouterUtilisateur.js"></script>
+    <script src='js/connexion.js.js'></script>
+    <script src="js/inscription.js"></script>
 </head>
 <body>
 
@@ -18,7 +19,7 @@
             <table class="table_tache" id="table_tache">
                 <tbody>
                 <tr>
-                    <th> nom du client </th>
+                    <th> prénom du client </th>
                     <th> taches </th>
                     <th> description </th>
                     <th> état </th>
@@ -27,6 +28,8 @@
             </table>
         </div>
     </section>
+
+
 
     <!-- popUps -->
 
@@ -37,13 +40,19 @@
             <div class="form">
                 <h1>Inscription</h1>
                 <form id="InscriptionForm" action="#">
-                    <input type="text" name="nom" placeholder="Nom" required>
-                    <input type="text" name="prenom" placeholder="Prénom" required>
-                    <input id="sexeInput" type="text" name="sexe" placeholder="sexe" required>
-                    <input type="password" name="pwd" placeholder="Mot de passe" required>
+                    <label for="nom">Votre nom :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                    <label for="prenom">Votre prénom :</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Prénom" required><br>
+                    <label for="sexe">Votre sexe :</label>
+                    <input  type="text" id="sexe" name="sexe" placeholder="Sexe" required>
+                    <label for="mailInput">Votre mail :</label>
+                    <input type="text" id="mailInput" name="mailInput" placeholder="Adresse mail" required><br>
+                    <label for="pwd">Votre mot de passe :</label>
+                    <input type="password" id="pwd" name="pwd" placeholder="Mot de passe" required><br>
                     <input id="submitBtn" type="submit" value="Envoyer">
-                    <input  >
-                    <div id="pseudoExisteDejaErreur">Le pseudo existe déjà!</div>
+
+                    <div id="mailExisteDejaErreur">Cette adresse mail est déjà utilisée !</div>
                 </form>
             </div>
         </div>
@@ -56,8 +65,10 @@
             <div class="form">
                 <h1>Connexion</h1>
                 <form id="connexionForm" action="#">
-                    <input type="text" name="username" placeholder="Pseudo" required>
-                    <input type="password" name="password" placeholder="Mot de passe" required>
+                    <label for="mail">Mail :</label>
+                    <input type="text" id="mail" name="mail" placeholder="Mail" required><br>
+                    <label for="password">mot de passe : </label>
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" required><br>
                     <input type="submit">
                 </form>
             </div>
